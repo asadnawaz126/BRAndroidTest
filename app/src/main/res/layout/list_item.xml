@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="store"
+            type="com.example.brandroidtest.model.Store" />
+
+        <import type="android.view.View" />
+    </data>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/store_logo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="170dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:padding="2dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:imageURL="@{viewModel.store.storeLogoURL}"-->
+<!--            tools:src="@tools:sample/backgrounds/scenic" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{viewModel.store.city}"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/store_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    app:imageURL = "@{store.storeLogoURL}"/>
+
+
+                <LinearLayout
+                    android:id="@+id/store_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:id="@+id/store_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/black"
+                        tools:text="@{store.address}" />
+
+
+                    <TextView
+                        android:id="@+id/store_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/black"
+                        tools:text="@{store.phone}" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</layout>
+

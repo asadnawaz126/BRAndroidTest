@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainListFragment">
+
+    <fragment
+        android:id="@+id/mainListFragment"
+        android:name="com.example.brandroidtest.main.StoreFragment"
+        android:label="MainListFragment"
+        tools:layout="@layout/fragment_store">
+        <action
+            android:id="@+id/action_mainListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.brandroidtest.detailed.StoreDetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_store_detail">
+
+        <argument
+            android:name="selectedStore"
+            app:argType="com.example.brandroidtest.model.Store"/>
+
+    </fragment>
+</navigation>

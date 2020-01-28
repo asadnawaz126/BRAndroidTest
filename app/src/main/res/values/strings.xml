@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BRAndroidTest</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="store_list_title">Store List</string>
+    <string name="preference_file_key">pref_file_key</string>
+</resources>
